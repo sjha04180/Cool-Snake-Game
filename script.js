@@ -94,6 +94,7 @@ function gameEngine() {
 }
 
 // Main logic starts here
+musicSound.play();
 let hiscore = localStorage.getItem("hiscore");
 if (hiscore === null || hiscore === undefined) { // Check for both null and undefined
     hiscoreval = 0;
@@ -106,7 +107,7 @@ else {
 window.requestAnimationFrame(main);
 window.addEventListener('keydown', e => {
     inputDir = { x: 0, y: 1 }; // Start the game
-    musicSound.play();
+
     moveSound.play();
 
     switch (e.key) {
@@ -132,5 +133,38 @@ window.addEventListener('keydown', e => {
             break;
         default:
             break;
+    }
+})
+
+let Up = document.querySelector(".up");
+Up.addEventListener("click", () => {
+    moveSound.play();
+    inputDir.x = 0;
+    inputDir.y = -1;
+})
+let Down = document.querySelector(".down");
+Down.addEventListener("click", () => {
+    moveSound.play();
+    inputDir.x = 0;
+    inputDir.y = 1;
+})
+let Left = document.querySelector(".left");
+Left.addEventListener("click", () => {
+    moveSound.play();
+    inputDir.x = -1;
+    inputDir.y = 0;
+})
+let Right = document.querySelector(".right");
+Right.addEventListener("click", () => {
+    moveSound.play();
+    inputDir.x = 1;
+    inputDir.y = 0;
+})
+let Center = document.querySelector(".center");
+Center.addEventListener("click", () => {
+    if (musicSound.paused) {
+        musicSound.play();
+    } else {
+        musicSound.pause();
     }
 })

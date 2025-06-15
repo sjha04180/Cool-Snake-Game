@@ -21,7 +21,7 @@
     height: 100px;
     position: absolute;
     top: 20px;
-    right: 200px;
+    right: 129px;
 }
 
 #HighScoreBox {
@@ -30,7 +30,7 @@
     height: 100px;
     position: absolute;
     top: 70px;
-    right: 156px;
+    right: 83px;
 }
 
 .board {
@@ -67,9 +67,75 @@
     box-shadow: 0 0 8px #ffaa33;
 }
 
+.buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    position: absolute;
+    right: 150px;
+    top: 50%;
+    gap: 10px;
+
+}
+
+.key img {
+    width: 45px;
+    height: 45px;
+}
+
+.up {
+    grid-column: 2/3;
+    border-radius: 4px;
+}
+
+.down {
+    grid-column: 2/3;
+    grid-row: 3/4;
+}
+
+.left {
+    grid-column: 1/2;
+    grid-row: 2/3;
+}
+
+.right {
+    grid-column: 3/4;
+    grid-row: 2/3;
+
+}
+
+.center {
+    grid-column: 2/3;
+    grid-row: 2/3;
+}
+
+.key:hover {
+    background-color: rgba(0, 255, 200, 0.2);
+    border-radius: 6px;
+    box-shadow: 0 0 10px #00ffee, 0 0 20px #00ffee;
+    transition: all 0.2s ease-in-out;
+    transform: scale(1.1);
+}
+
+
 @media (max-width: 500px) {
+    body {
+        background: linear-gradient(40deg, #1b1b2f, #162447);
+    }
+
+    .body {
+        min-height: 82vh;
+    }
+
     .board {
         width: 86vw;
         height: 48vh;
+    }
+
+    .buttons {
+        position: absolute;
+        right: 129px;
+        top: 69%;
+        gap: 10px;
     }
 }
