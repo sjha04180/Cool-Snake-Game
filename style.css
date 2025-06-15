@@ -1,0 +1,75 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.body {
+    background: linear-gradient(135deg, #1b1b2f, #162447);
+    min-height: 100vh;
+    background-size: 100vw 100vh;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+
+}
+
+#scoreBox {
+    font-size: 2rem;
+    width: 154px;
+    height: 100px;
+    position: absolute;
+    top: 20px;
+    right: 200px;
+}
+
+#HighScoreBox {
+    font-size: 2rem;
+    width: 200px;
+    height: 100px;
+    position: absolute;
+    top: 70px;
+    right: 156px;
+}
+
+.board {
+    background: linear-gradient(to bottom, #0f2027, #203a43, #2c5364);
+    /* Deep jungle blues */
+    border: 2px solid #00ffcc;
+    border-radius: 8px;
+    width: 44vw;
+    height: 90vh;
+    display: grid;
+    grid-template-columns: repeat(18, 1fr);
+    grid-template-rows: repeat(18, 1fr);
+}
+
+.snake {
+    background-color: rgba(0, 255, 135, 1);
+    border: 1px solid #00ffee;
+    box-shadow: 0 0 6px #00ffcc;
+    border-radius: 5px;
+}
+
+.head {
+    background: linear-gradient(135deg, #ff00cc, #3333ff);
+    border: 2px solid #ffffff;
+    transform: scale(1.2);
+    border-radius: 5px;
+    box-shadow: 0 0 8px #ff00cc;
+}
+
+.food {
+    background: linear-gradient(145deg, #ffde59, #ff914d);
+    border: 1px solid #fff;
+    border-radius: 6px;
+    box-shadow: 0 0 8px #ffaa33;
+}
+
+@media (max-width: 500px) {
+    .board {
+        width: 86vw;
+        height: 48vh;
+    }
+}
