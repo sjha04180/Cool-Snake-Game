@@ -26,11 +26,11 @@
 
 #HighScoreBox {
     font-size: 2rem;
-    width: 200px;
+    width: 236px;
     height: 100px;
     position: absolute;
     top: 70px;
-    right: 83px;
+    right: 70px;
 }
 
 .board {
@@ -133,8 +133,8 @@
 
     .buttons {
         position: absolute;
-        right: 129px;
-        top: 69%;
+        right: 110px;
+        top: 72%;
         gap: 10px;
     }
 }
